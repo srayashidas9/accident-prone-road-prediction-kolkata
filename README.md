@@ -27,3 +27,6 @@ grid_id, row, col (row 0 = south), lat, long · coverage (share of cell inside s
 - **CSI is partial:** temperature, wind speed and dew point only. Rainfall and surface pressure are not yet included. The source file's "Humidity" column was actually dew-point temperature in Kelvin and was renamed.
 - Thin/thick uses OSM road class, not measured road width; no accident records are used yet.
 - RBFCI, CSRFI and PPS are not computed here because their formulas should be confirmed with the mentor first.
+## How to run
+python code/fractal_pipeline.py data/raw/roads.geojson data/raw/buildings.geojson out 500
+python code/merge_and_maps.py out data/climate_master_partial.csv data/raw/buildings.geojson
